@@ -110,6 +110,11 @@ def new_user():
 
     return redirect('/login')
 
+@app.route('/cart/<user_id>')
+def cart(user_id):
+    user = User.query.get(user_id)
+    return render_template("cart.html", user=user)
+
 @app.route('/logout')
 def logout():
     session.clear()
