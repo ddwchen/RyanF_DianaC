@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+
+
 /* start: global styles */
 body {
     font-family: 'Raleway', sans-serif;
@@ -26,6 +28,10 @@ body {
     padding: 0 20px;
     
     
+}
+
+.containercontent-section {
+    padding-top:100px;
 }
 
 .flex {
@@ -192,6 +198,31 @@ header ul.is-sticky li a.active {
     width: 100%;
 }
 
+#signup {
+    background: url("../static/img/rack.jpeg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#login {
+    background: url("../static/img/items.jpeg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
 #hero .fade {
     position: absolute;
     width: 100%;
@@ -215,14 +246,21 @@ header ul.is-sticky li a.active {
     text-align: center;
 }
 
+#hero h1{
+    padding-right: 420px;
+}
+
+
 #hero .hero-text p {
     line-height: 1.5em;
     font-weight: 300;
     font-size: 1rem;
+    margin-right: 260px;
 }
 /* end: hero section styles */
 
-/* start: how it works styles */
+/* start: how-it-works styles */
+
 #how-it-works {
     padding: 3rem 0;
     background: #7fa9d3;
@@ -256,9 +294,9 @@ header ul.is-sticky li a.active {
     color: rgb(252, 214, 165);
 }
 
-/* end: how it works styles */
+/* end: how-it-works styles */
 
-/* start: properties styles */
+/* start: carousel styles */
 .carousel-item {
     width: 500px;
     height: 1000px;
@@ -277,9 +315,10 @@ header ul.is-sticky li a.active {
     color: rgb(252, 214, 165);
 }
 
-/* end: properties styles */
+/* end: carousel styles */
 
-/* start: agents styles */
+
+/* start: testimonial styles */
 #agents {
     margin: 4rem 0 6rem;
     padding: 0 0 6rem;
@@ -302,6 +341,42 @@ header ul.is-sticky li a.active {
     margin-bottom: 2rem;
 }
 
+.card {
+    margin-top: 300px;
+    margin-left: 650px;
+    width: 630px;
+    height: 530px;
+    background-color: rgb(252, 214, 165) !important;
+}
+
+.card h3 {
+    margin: 10px 10px 10px 130px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#login .card h3 {
+    margin: 10px 10px 10px 210px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card p {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 257px;
+}
+
+#login .card p {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 245;
+}
+
+.card label {
+    font-family: 'Raleway', sans-serif;
+}
+
+.card button {
+    margin-left: 235px;
+}
+
 #agents .card img {
     width: 100%;
 }
@@ -315,9 +390,9 @@ header ul.is-sticky li a.active {
 #agents .card p {
     padding-left: 1rem;
 }
-/* end: agents styles */
+/* end: testimonial styles */
 
-/* start: best real estate company styles */
+/* start: best selling styles */
 #the-best {
     background-color: #7fa9d3;
     margin:25px;
@@ -354,7 +429,7 @@ header ul.is-sticky li a.active {
     style:inline-block;
     text-align: center;
 }
-/* end: best real estate company styles */
+/* end: best selling styles */
 
 /* start: services styles */
 #services {
@@ -688,6 +763,10 @@ footer small a:hover {
         display: block;
     }
 
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+      }
+
     nav ul {
         position: fixed;
         background: rgb(252, 214, 165);
@@ -910,3 +989,352 @@ footer small a:hover {
     }
 }
 /* end: media queries */
+
+/* start: shopping cart styles */
+#header-hero-container-cart {
+    background-image: url('../static/img/cart.jpeg');
+}
+
+
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: rgb(252, 214, 165);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgb(252, 214, 165)
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+
+
+.main-header {
+    background-color: rgb(252, 214, 165);
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: white;
+}
+
+.band-name-large {
+    font-size: 8em;
+}
+
+.content-section {
+    margin: 1em;
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: rgb(252, 214, 165);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgb(252, 214, 165);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color:rgb(252, 214, 165);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
+
+.tour-row {
+    border-bottom: 1px solid rgb(252, 214, 165);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: rgb(252, 214, 165);
+    width: 11%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(252, 214, 165);
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: rgb(252, 214, 165);
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: rgb(252, 214, 165);
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(252, 214, 165);
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-item span {
+    color: rgb(252, 214, 165);
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: rgb(252, 214, 165);
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(252, 214, 165);
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: rgb(252, 214, 165);
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+/* end: shopping cart styles */
+
