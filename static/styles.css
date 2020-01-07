@@ -347,6 +347,7 @@ header ul.is-sticky li a.active {
     width: 630px;
     height: 530px;
     background-color: rgb(252, 214, 165) !important;
+    color: black;
 }
 
 .card h3 {
@@ -1006,7 +1007,7 @@ footer small a:hover {
 * {
     box-sizing: border-box;
     font-family: Raleway;
-    color: rgb(252, 214, 165);
+    
 }
 
 html, body {
