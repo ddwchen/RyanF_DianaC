@@ -83,10 +83,6 @@ def new_user():
     user_check = User.query.filter_by(email=request.form["email"]).first() 
     if user_check is not None:
         errors.append("Your email is already in use. Please log in.")
-    
-    if request.form['password'] != request.form['confirm']:
-        errors.append("Your passwords must match. Please try again.")
-        valid = False
 
     if errors:
         for e in errors:
@@ -96,8 +92,7 @@ def new_user():
         new_user = None
 
         new_user = User(
-            first_name = request.form["first_name"],
-            last_name = request.form["last_name"],
+            full_name = request.form["full_name"],
             email = request.form["email"],
             password = hashed
         )
@@ -105,7 +100,7 @@ def new_user():
         db.session.add(new_user)
         db.session.commit()
         session["user_id"] = new_user.id
-        return redirect('/saves')
+        return redirect('/')
 
     return redirect('/login')
 
