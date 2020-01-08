@@ -125,9 +125,23 @@ def user_login():
 def women():
     return render_template("shoppingcartWomen.html")
 
+@app.route('/women/checkout', methods=['POST'])
+def women_checkout():
+    print("Get Post Info")
+    print(request.form)
+    sweater1_from_form = request.form['sweater1']
+    #insert remaining clothing items here 
+
 @app.route('/men')
 def men():
     return render_template("shoppingcartMen.html")
+
+@app.route('/men/checkout', methods=['POST'])
+def men_checkout():
+    print("Get Post Info")
+    print(request.form)
+    sweater1_from_form = request.form['sweater1']
+    #insert remaining clothing items here 
 
 @app.route('/cart/<user_id>')
 def cart(user_id):
@@ -138,13 +152,6 @@ def cart(user_id):
 def logout():
     session.clear()
     return redirect('/')
-
-@app.route('/checkout', methods=['POST'])
-def create_user():
-    print("Get Post Info")
-    print(request.form)
-    sweater1_from_form = request.form['sweater1']
-    #insert remaining clothing items here 
 
 if __name__ == "__main__":
     app.run(debug=True)
