@@ -112,14 +112,22 @@ def user_login():
     
     if not user_attempt:
         flash("Your email and password combination is incorrect.")
-        return redirect("/login")
+        return redirect("/sign_up")
 
     if not bcrypt.check_password_hash(user_attempt.password, request.form["password"]):
         flash("Your email and password combination is incorrect.")
-        return redirect("/login")
+        return redirect("/sign_up")
 
     session["user_id"] = user_attempt.id
     return redirect('/')
+
+@app.route('/women')
+def women():
+    return render_template("shoppingcartWomen.html")
+
+@app.route('/men')
+def men():
+    return render_template("shoppingcartMen.html")
 
 @app.route('/cart/<user_id>')
 def cart(user_id):
