@@ -552,6 +552,14 @@ header ul.is-sticky li a.active {
     box-sizing: border-box;
 }
 
+#interested {
+    padding-left: 0px !important;
+}
+
+#interests {
+    padding-right: 9px !important;
+}
+
 #form-container h3 {
     color: rgb(252, 214, 165);
     font-family: 'Raleway', sans-serif;
@@ -1212,6 +1220,10 @@ html, body {
 
 .shop-item-image {
     height: 250px;
+}
+
+.shirts {
+    padding-top: 30px !important;
 }
 
 .shop-item-details {
