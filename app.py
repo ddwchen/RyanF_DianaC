@@ -26,8 +26,7 @@ add_to_cart_table = db.Table('cart',
 class User(db.Model):	
     __tablename__ = "users"    		
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(45))
-    last_name = db.Column(db.String(45))
+    full_name = db.Column(db.String(45))
     email = db.Column(db.String(45), unique=True)
     password = db.Column(db.String(255))
     address_line1 = db.Column(db.String(255))
@@ -61,17 +60,13 @@ def index():
 def login():
     return render_template("login.html")
 
+@app.route('/sign_up')
+def sign_up():
+    return render_template("signup.html")
+
 @app.route('/new_user', methods=['POST'])
 def new_user():
     errors = []
-
-    if len(request.form['first_name']) < 2:
-        errors.append("Your first name must be at least 2 characters long.")
-        valid = False
-
-    if len(request.form['last_name']) < 2:
-        errors.append("Your last name must be at least 2 characters long.")
-        valid = False
 
     if not EMAIL_REGEX.match(request.form['email']):
         errors.append("Your email address is invalid. Please try again.")
@@ -79,6 +74,10 @@ def new_user():
 
     if len(request.form['password']) < 8:
         errors.append("Your password must be at least 8 characters long.")
+        valid = False
+
+    if len(request.form['full_name']) < 2:
+        errors.append("Your name must be at least 2 characters long.")
         valid = False
 
     user_check = User.query.filter_by(email=request.form["email"]).first() 
