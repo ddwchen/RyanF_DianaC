@@ -109,6 +109,23 @@ def new_user():
 
     return redirect('/login')
 
+@app.route('/user/login', methods=['POST'])
+def user_login():
+    errors = []
+
+    user_attempt = User.query.filter_by(email=request.form["email"]).first()
+    
+    if not user_attempt:
+        flash("Your email and password combination is incorrect.")
+        return redirect("/login")
+
+    if not bcrypt.check_password_hash(user_attempt.password, request.form["password"]):
+        flash("Your email and password combination is incorrect.")
+        return redirect("/login")
+
+    session["user_id"] = user_attempt.id
+    return redirect('/')
+
 @app.route('/cart/<user_id>')
 def cart(user_id):
     user = User.query.get(user_id)
